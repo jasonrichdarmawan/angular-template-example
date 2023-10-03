@@ -7,11 +7,9 @@ import { GetNamesService } from '../../../domain/usecases/get-names.service';
   styleUrls: ['./template-example-non-observable.component.scss']
 })
 export class TemplateExampleNonObservableComponent implements OnInit {
-  names: string[];
+  names!: string[];
 
   constructor(getNames: GetNamesService) {
-    this.names = [];
-    
     getNames.getPromise().then((names) => {
       this.names = names;
     })
