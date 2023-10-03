@@ -1,8 +1,8 @@
-<p>template-example works!</p>
+<p>template-example-non-observable works!</p>
 
-<ng-container *ngIf="this.names | async as names; else loading">
+<ng-container *ngIf="this.names; else loading">
     <div>
-        <ng-container *ngIf="names.length > 0; else noName">
+        <ng-container *ngIf="this.names.length > 0; else noName">
             <div *ngFor="let name of names">
                 {{name}}
             </div>

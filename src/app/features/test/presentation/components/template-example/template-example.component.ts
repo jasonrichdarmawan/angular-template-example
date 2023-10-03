@@ -11,7 +11,7 @@ export class TemplateExampleComponent implements OnInit {
   names: Observable<string[]>;
 
   constructor(getNames: GetNamesService) {
-    this.names = getNames.get();
+    this.names = getNames.getObservable();
   }
 
   ngOnInit(): void {

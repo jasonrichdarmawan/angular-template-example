@@ -5,12 +5,14 @@ import { TestRoutingModule } from './test-routing.module';
 import { Test1Component } from './presentation/pages/test1/test1.component';
 import { TemplateExampleComponent } from './presentation/components/template-example/template-example.component';
 import { GetNamesService } from './domain/usecases/get-names.service';
+import { TemplateExampleNonObservableComponent } from './presentation/components/template-example-non-observable/template-example-non-observable.component';
 
 
 @NgModule({
   declarations: [
     Test1Component,
-    TemplateExampleComponent
+    TemplateExampleComponent,
+    TemplateExampleNonObservableComponent
   ],
   imports: [
     CommonModule,

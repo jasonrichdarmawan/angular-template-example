@@ -7,7 +7,7 @@ export class GetNamesService {
 
   constructor() { }
 
-  get() {
+  getObservable() {
     return of(this.names)
       .pipe(
         map((items) => {
@@ -19,5 +19,19 @@ export class GetNamesService {
         }),
         delay(1000),
       )
+  }
+
+  getPromise() {
+    return new Promise<string[]>((resolve, reject) => {
+      setTimeout(() => {
+        let oneOrZero = Math.round(Math.random());
+
+        if (oneOrZero === 0) {
+          resolve([]);
+        } else {
+          resolve(this.names);
+        }
+      }, 1000);
+    })
   }
 }
