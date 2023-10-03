@@ -1,3 +1,8 @@
+# What is it?
+
+- Simulate getting data from internet with `<ng-template #loading>`
+- Use `<ng-template #noName>` to render if server return no name.
+
 # AngularTemplateExample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
