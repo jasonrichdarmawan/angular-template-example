@@ -1,0 +1,17 @@
+<p>template-example works!</p>
+
+<ng-container *ngIf="this.names | async as names; else loading">
+    <ng-container *ngIf="names.length > 0; else noName">
+        <div *ngFor="let name of names">
+            {{name}}
+        </div>
+    </ng-container>
+
+    <ng-template #noName>
+        No name
+    </ng-template>
+</ng-container>
+
+<ng-template #loading>
+    <div>Loading</div>
+</ng-template>
